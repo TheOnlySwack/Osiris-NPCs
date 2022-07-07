@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Swarm-Virus-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Behavior]
+      [BehaviorName:Strike]
+	  [StrikeBreakawayDistance:400]
+	  [TargetData:Virus-Target]
+	  
+	  
+	  
+
+      </Description>
+      
+    </EntityComponent>
+	
+		 <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>Virus-Target</SubtypeId>
+      </Id>
+      <Description>
+	  
+	    [RivalAI Target]
+      
+      [UseCustomTargeting:true]
+      [Target:Player]
+	  [BlockTargets:All]
+      
+      
+      [MaxDistance:8000]
+      
+      [MatchAllFilters:OutsideOfSafezone]
+      [MatchAllFilters:Owner]
+      [MatchAllFilters:Relation]
+      [MatchAllFilters:Faction]
+      [GetTargetBy:ClosestDistance]
+      
+      [Owners:Player]
+      [Relations:Neutral]
+	  [Relations:Enemy]
+	  [Relations:Faction]
+      [PrioritizeSpecifiedFactions:true]
+
+  
+
+      </Description>
+      
+    </EntityComponent>
+	
+
+	
+
+
+	
+  </EntityComponents>
+</Definitions>

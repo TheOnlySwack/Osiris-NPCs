@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>HADES-Yager-Cruiser</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:HADES]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:120000]
+			[PCUMaximum:400000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>HADES-Space-Hard-Behavior</Behaviour>
+					
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+				<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>HADES-HunterKiller-Destroyer</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[AtmosphericCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:HADES]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:80000]
+			[PCUMaximum:200000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="HunterKiller Destroyer">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>HADES-Space-Hard-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>HADES-Halifax-Destroyer</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:HADES]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:70000]
+			[PCUMaximum:500000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Halifax Warship">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>HADES-Space-Hard-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>HADES-Red Rackem-Destroyer</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:HADES]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:60000]
+			[PCUMaximum:500000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Red Rackem">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>HADES-Space-Hard-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>HADES-Torpur-Destroyer</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:HADES]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:50000]
+			[PCUMaximum:500000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Torpur">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>HADES-Space-Hard-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>HADES-Vienna -Destroyer</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:HADES]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:50000]
+			[PCUMaximum:500000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Vienna ">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>HADES-Space-Hard-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>HADES-Cabal-Destroyer</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[AtmosphericCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:HADES]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:80000]
+			[PCUMaximum:200000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Cabal">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>HADES-Space-Hard-Behavior</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+				<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>HADES-Bellerus-CargoShip</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[AtmosphericCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:HADES]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:15000]
+			[PCUMaximum:100000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Bellerus">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>HADES-Atmo-Easy-Behavior</Behaviour>
+					
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>HADES-Flockings Cargoship-CargoShip</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:HADES]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:15000]
+			[PCUMaximum:100000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Flockings Cargoship">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>HADES-Atmo-Easy-Behavior</Behaviour>
+					
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>HADES-Dymio-CargoShip</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[AtmosphericCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:HADES]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:0]
+			[PCUMaximum:30000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Dymio">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>HADES-Atmo-Easy-Behavior</Behaviour>
+					
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>HADES-HandenBurg-CargoShip</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[AtmosphericCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:HADES]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:15000]
+			[PCUMaximum:50000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="HandenBurg">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>HADES-Atmo-Easy-Behavior</Behaviour>
+					
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>HADES-Tooth Cat-Fighter</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[RivalAiSpawn:true]
+			[FactionOwner:HADES]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>90</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Tooth Cat">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>90</Speed>
+					<Behaviour>SWARM-Rugae-Behavior</Behaviour>
+					
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+	</SpawnGroups>
+</Definitions>

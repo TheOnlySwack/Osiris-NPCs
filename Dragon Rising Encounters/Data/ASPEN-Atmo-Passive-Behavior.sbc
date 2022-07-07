@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Behavior]
+      [BehaviorName:Passive]
+	  [Triggers:ASPEN-Atmo-Easy-TriggerWarning]
+	  [Triggers:ASPEN-Atmo-Easy-TriggerProxDefence]
+	  [Triggers:ASPEN-Atmo-Easy-TriggerEscape]
+	  [Triggers:ASPEN-Atmo-Easy-TriggerAllClear]
+	  [Triggers:ASPEN-Atmo-Easy-TriggerDeath]
+	  [Triggers:ASPEN-Atmo-Easy-TriggerWarningReply]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-TriggerWarning</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:PlayerNear]
+	  [UseTrigger:true]
+	  [TargetDistance:4000]
+	  [MaxActions:1]
+	  [Actions:ASPEN-Atmo-Easy-ActionWarning]
+	  
+      </Description>
+      
+    </EntityComponent>	
+
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-ActionWarning</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+      [UseChatBroadcast:true]
+      [ChatData:ASPEN-Atmo-Easy-ChatWarning]
+	  [ResetCooldownTimeOfTriggers:true]
+	  [ResetTriggerCooldownNames:ASPEN-Atmo-Easy-TriggerWarningReply]
+	  
+	  [SetBooleansTrue:ChatWarningReply]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-ChatWarning</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:30]
+      [MaxChats:1]
+      [BroadcastRandomly:true]
+      
+      [Author:Aspen Control]
+      [Color:Red]
+      
+      [ChatMessages:Warning to nearby vessels rouge Engineers are nearby.]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+	  [ChatMessages:Please be infromed that this ship is under protection by the Aspen Corporation.]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-TriggerWarningReply</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:Timer]
+	  [UseTrigger:true]
+	  [MinCooldownMs:3000]
+	  [MaxCooldownMs:4000]
+	  [Actions:ASPEN-Atmo-Easy-ActionWarningReply]
+	  [Conditions:ASPEN-Atmo-Easy-ConditionWarningReply]
+	  
+      </Description>
+      
+    </EntityComponent>	
+
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-ActionWarningReply</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+      [UseChatBroadcast:true]
+      [ChatData:ASPEN-Atmo-Easy-ChatWarningReply]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-ChatWarningReply</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:100]
+      [MaxChats:1]
+      [BroadcastRandomly:true]
+      
+      [Author:{AntennaName}]
+      [Color:Red]
+      
+      [ChatMessages:Roger that Control. We will keep an eye out.]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+      [ChatMessages:You are not alone, Reinforcements approach.]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]	  
+
+      [ChatMessages:Acknowledged.]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      [ChatMessages:Probably just scavengers. keep an eye on them]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+
+
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-ConditionWarningReply</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Condition]
+      
+      [UseConditions:true]
+      [MatchAnyCondition:false]
+	  [CheckTrueBooleans:true]
+	  [TrueBooleans:ChatWarningReply]
+      
+      </Description>
+      
+    </EntityComponent>
+
+
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-TriggerProxDefence</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:PlayerNear]
+	  [UseTrigger:true]
+	  [TargetDistance:2000]
+	  [MaxActions:3]
+	  [StartsReady:true]
+	  [MinCooldownMs:120000]
+	  [MaxCooldownMs:180000]
+	  [Actions:ASPEN-Atmo-Easy-ActionProxDefence]
+	  
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-ActionProxDefence</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+      [UseChatBroadcast:true]
+	  [ChatData:ASPEN-Atmo-Easy-ChatProxDefence]
+	  
+	  [ChangeAutopilotSpeed:true]
+	  [NewAutopilotSpeed:70]
+	  
+	  [SpawnEncounter:true]
+	  [Spawner:ASPEN-Atmo-Easy-SpawnerProxDefence]
+	  
+	  [ResetCooldownTimeOfTriggers:true]
+	  [ResetTriggerCooldownNames:ASPEN-Atmo-Easy-TriggerAllClear]
+	  
+	  [SetBooleansTrue:CargoShipSpeedUp]
+      
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-ChatProxDefence</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:100]
+      [MaxChats:1]
+      [BroadcastRandomly:true]
+      
+      [Author:{AntennaName}]
+      [Color:Red]
+      
+      [ChatMessages:Threat detected. Escape velocity!]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-SpawnerProxDefence</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Spawn]
+      
+      [UseSpawn:true]
+      
+      [StartsReady:true]
+      [MaxSpawns:2]
+      
+      [SpawnGroups:ASPEN-TickTac-Fighter]
+      
+      [UseRelativeSpawnPosition:false]
+      [MinDistance:2000]
+      [MaxDistance:2500]
+      [MinAltitude:2000]
+      [MaxAltitude:2500]
+      [IgnoreSafetyChecks:false]
+      
+      </Description>
+      
+    </EntityComponent>
+	
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-TriggerEscape</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:Damage]
+	  [UseTrigger:true]
+	  [DamageTypes:Any]
+	  [MaxActions:3]
+	  [StartsReady:true]
+	  [MinCooldownMs:60000]
+	  [MaxCooldownMs:120000]
+	  [Actions:ASPEN-Atmo-Easy-ActionEscape]
+	  
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-ActionEscape</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+      [UseChatBroadcast:true]
+	  [ChatData:ASPEN-Atmo-Easy-ChatEscape]
+	  
+	  [ChangeAutopilotSpeed:true]
+	  [NewAutopilotSpeed:100]
+	  
+	  [SpawnEncounter:true]
+	  [Spawner:ASPEN-Atmo-Easy-SpawnerEscape]
+	  
+	  [ResetCooldownTimeOfTriggers:true]
+	  [ResetTriggerCooldownNames:ASPEN-Atmo-Easy-TriggerAllClear]
+	  
+	  [SetBooleansTrue:CargoShipSpeedUp]
+      
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-ChatEscape</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:100]
+      [MaxChats:1]
+      [BroadcastRandomly:true]
+      
+      [Author:{AntennaName}]
+      [Color:Red]
+      
+      [ChatMessages:We will be back!]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-SpawnerEscape</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Spawn]
+      
+      [UseSpawn:true]
+      
+      [StartsReady:true]
+      [MaxSpawns:2]
+      
+      [SpawnGroups:ASPEN-TickTac-Fighter]
+      
+      [UseRelativeSpawnPosition:false]
+      [MinDistance:2000]
+      [MaxDistance:2500]
+      [MinAltitude:2000]
+      [MaxAltitude:2500]
+      [IgnoreSafetyChecks:false]
+      
+      </Description>
+      
+    </EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-TriggerAllClear</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:Timer]
+	  [UseTrigger:true]
+	  [MinCooldownMs:30000]
+	  [MaxCooldownMs:60000]
+	  [Actions:ASPEN-Atmo-Easy-ActionAllClear]
+	  [Conditions:ASPEN-Atmo-Easy-ConditionAllClear]
+	  
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-ConditionAllClear</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Condition]
+      
+      [UseConditions:true]
+      [MatchAnyCondition:false]
+	  [CheckTrueBooleans:true]
+	  [TrueBooleans:CargoShipSpeedUp]
+      
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ASPEN-Atmo-Easy-ActionAllClear</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+	  [ChangeAutopilotSpeed:true]
+	  [NewAutopilotSpeed:40]
+
+      [SetBooleansFalse:CargoShipSpeedUp]
+
+      </Description>
+      
+    </EntityComponent>
+
+
+
+	
+  </EntityComponents>
+</Definitions>

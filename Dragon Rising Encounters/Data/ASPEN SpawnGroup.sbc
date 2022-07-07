@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>ASPEN-Feddex-CargoShip</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[AtmosphericCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:ASPEN]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:0]
+			[PCUMaximum:30000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Feddex">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>ASPEN-Atmo-Easy-Behavior</Behaviour>
+					
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>ASPEN-Tauras-Destroyer</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:ASPEN]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:2000]
+			[PCUMinimum:60000]
+			[PCUMaximum:100000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Tauras">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>ASPEN-Space-Hard-Behavior</Behaviour>
+					
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>ASPEN-Musashi-Destroyer</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[SpaceCargoShip:true]
+			[AtmosphericCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:ASPEN]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:40000]
+			[PCUMaximum:100000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>50</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Musashi">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>ASPEN-Space-Hard-Behavior</Behaviour>
+					
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>ASPEN-TickTac-Fighter</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[RivalAiSpawn:true]
+			[FactionOwner:ASPEN]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>90</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="TickTac">
+					<Position>
+						<X>30.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>90</Speed>
+					<Behaviour>SWARM-Rugae-Behavior</Behaviour>
+					
+				</Prefab>
+				<Prefab SubtypeId="TickTac">
+					<Position>
+						<X>-30.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>90</Speed>
+					<Behaviour>SWARM-Rugae-Behavior</Behaviour>
+					
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+	</SpawnGroups>
+</Definitions>

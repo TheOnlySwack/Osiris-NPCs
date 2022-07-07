@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Behavior]
+      [BehaviorName:Passive]
+	  [Triggers:ACS-SpaceEasy-TriggerWarning]
+	  [Triggers:ACS-SpaceEasy-TriggerProxDefence]
+	  [Triggers:ACS-SpaceEasy-TriggerEscape]
+	  [Triggers:ACS-SpaceEasy-TriggerAllClear]
+	  [Triggers:ACS-SpaceEasy-TriggerDeath]
+	  [Triggers:ACS-SpaceEasy-TriggerWarningReply]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-TriggerWarning</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:PlayerNear]
+	  [UseTrigger:true]
+	  [TargetDistance:3000]
+	  [MaxActions:1]
+	  [Actions:ACS-SpaceEasy-ActionWarning]
+	  
+      </Description>
+      
+    </EntityComponent>	
+
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-ActionWarning</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+      [UseChatBroadcast:true]
+      [ChatData:ACS-SpaceEasy-ChatWarning]
+	  [ResetCooldownTimeOfTriggers:true]
+	  [ResetTriggerCooldownNames:ACS-SpaceEasy-TriggerWarningReply]
+	  
+	  [SetBooleansTrue:ChatWarningReply]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-ChatWarning</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:100]
+      [MaxChats:1]
+      [BroadcastRandomly:true]
+      
+      [Author:{AntennaName}]
+      [Color:Red]
+      
+      [ChatMessages:Potential hostiles observed. requesting backup]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+	  [ChatMessages:Unidentified craft spotted at grid C34]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      [ChatMessages:Command. unknown bogie on the scope]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      [ChatMessages:Possible hostiles sighted]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+      [ChatMessages:Hostile spotted. HQ please advise]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+      [ChatMessages:Tower. I'm not alone out here]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+
+
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-TriggerWarningReply</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:Timer]
+	  [UseTrigger:true]
+	  [MinCooldownMs:3000]
+	  [MaxCooldownMs:4000]
+	  [Actions:ACS-SpaceEasy-ActionWarningReply]
+	  [Conditions:ACS-SpaceEasy-ConditionWarningReply]
+	  
+      </Description>
+      
+    </EntityComponent>	
+
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-ActionWarningReply</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+      [UseChatBroadcast:true]
+      [ChatData:ACS-SpaceEasy-ChatWarningReply]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-ChatWarningReply</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:100]
+      [MaxChats:1]
+      [BroadcastRandomly:true]
+      
+      [Author:ASSERT Command]
+      [Color:Red]
+      
+      [ChatMessages:Acknowledged. Continue on current vector.]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+      [ChatMessages:Drone ops on alert. continue current heading.]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]	  
+
+      [ChatMessages:Acknowledged.]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+      [ChatMessages:Roger. proceed with caution]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+      [ChatMessages:That's your third call this week]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      [ChatMessages:Probably just scavengers. keep an eye on them]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+
+
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-ConditionWarningReply</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Condition]
+      
+      [UseConditions:true]
+      [MatchAnyCondition:false]
+	  [CheckTrueBooleans:true]
+	  [TrueBooleans:ChatWarningReply]
+      
+      </Description>
+      
+    </EntityComponent>
+
+
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-TriggerProxDefence</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:PlayerNear]
+	  [UseTrigger:true]
+	  [TargetDistance:2000]
+	  [MaxActions:3]
+	  [StartsReady:true]
+	  [MinCooldownMs:120000]
+	  [MaxCooldownMs:180000]
+	  [Actions:ACS-SpaceEasy-ActionProxDefence]
+	  
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-ActionProxDefence</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+      [UseChatBroadcast:true]
+	  [ChatData:ACS-SpaceEasy-ChatProxDefence]
+	  
+	  [ChangeAutopilotSpeed:true]
+	  [NewAutopilotSpeed:50]
+	  
+	  [SpawnEncounter:true]
+	  [Spawner:ACS-SpaceEasy-SpawnerProxDefence]
+	  
+	  [ResetCooldownTimeOfTriggers:true]
+	  [ResetTriggerCooldownNames:ACS-SpaceEasy-TriggerAllClear]
+	  
+	  [SetBooleansTrue:CargoShipSpeedUp]
+      
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-ChatProxDefence</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:100]
+      [MaxChats:3]
+      [BroadcastRandomly:true]
+      
+      [Author:{AntennaName}]
+      [Color:Red]
+      
+      [ChatMessages:Calling drone support. Engage hostiles]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-SpawnerProxDefence</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Spawn]
+      
+      [UseSpawn:true]
+      
+      [StartsReady:true]
+      [MaxSpawns:3]
+      
+      [SpawnGroups:(NPC-AI) Firefly Drone]
+	  [SpawnGroups:(NPC-AI) Monarch Drone]
+	  [SpawnGroups:(NPC-AI) Space Wasp Drone]
+      
+      [UseRelativeSpawnPosition:false]
+      [MinDistance:2000]
+      [MaxDistance:2500]
+      [MinAltitude:2000]
+      [MaxAltitude:2500]
+      [IgnoreSafetyChecks:false]
+      
+      </Description>
+      
+    </EntityComponent>
+	
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-TriggerEscape</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:Damage]
+	  [UseTrigger:true]
+	  [DamageTypes:Any]
+	  [MaxActions:3]
+	  [StartsReady:true]
+	  [MinCooldownMs:60000]
+	  [MaxCooldownMs:120000]
+	  [Actions:ACS-SpaceEasy-ActionEscape]
+	  
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-ActionEscape</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+      [UseChatBroadcast:true]
+	  [ChatData:ACS-SpaceEasy-ChatEscape]
+	  
+	  [ChangeAutopilotSpeed:true]
+	  [NewAutopilotSpeed:70]
+	  
+	  [SpawnEncounter:true]
+	  [Spawner:ACS-SpaceEasy-SpawnerEscape]
+	  
+	  [ResetCooldownTimeOfTriggers:true]
+	  [ResetTriggerCooldownNames:ACS-SpaceEasy-TriggerAllClear]
+	  
+	  [SetBooleansTrue:CargoShipSpeedUp]
+      
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-ChatEscape</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:100]
+      [MaxChats:1]
+      [BroadcastRandomly:true]
+      
+      [Author:{AntennaName}]
+      [Color:Red]
+      
+      [ChatMessages:Calling all friendlies. we are under attack!]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-SpawnerEscape</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Spawn]
+      
+      [UseSpawn:true]
+      
+      [StartsReady:true]
+      [MaxSpawns:3]
+      
+      [SpawnGroups:(NPC-AI) Firefly Drone]
+	  [SpawnGroups:(NPC-AI) Locust Drone]
+	  [SpawnGroups:(NPC-AI) Monarch Drone]
+	  [SpawnGroups:(NPC-AI) Space Wasp Drone]
+      
+      [UseRelativeSpawnPosition:false]
+      [MinDistance:2000]
+      [MaxDistance:2500]
+      [MinAltitude:2000]
+      [MaxAltitude:2500]
+      [IgnoreSafetyChecks:false]
+      
+      </Description>
+      
+    </EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-TriggerAllClear</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:Timer]
+	  [UseTrigger:true]
+	  [MinCooldownMs:30000]
+	  [MaxCooldownMs:60000]
+	  [Actions:ACS-SpaceEasy-ActionAllClear]
+	  [Conditions:ACS-SpaceEasy-ConditionAllClear]
+	  
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-ConditionAllClear</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Condition]
+      
+      [UseConditions:true]
+      [MatchAnyCondition:false]
+	  [CheckTrueBooleans:true]
+	  [TrueBooleans:CargoShipSpeedUp]
+      
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-ActionAllClear</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+	  [ChangeAutopilotSpeed:true]
+	  [NewAutopilotSpeed:40]
+
+      [SetBooleansFalse:CargoShipSpeedUp]
+
+      </Description>
+      
+    </EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-TriggerDeath</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:Compromised]
+	  [UseTrigger:true]
+	  [StartsReady:true]
+	  [MaxActions:1]
+	  [Actions:ACS-SpaceEasy-ActionDeath]
+	  
+      </Description>
+      
+    </EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>ACS-SpaceEasy-ActionDeath</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      [GenerateExplosion:true]
+	  [ExplosionRange:2]
+	  [ExplosionDamage:2]
+	  [ExplosionIgnoresVoxels:true]
+	  [DamageToolAttacker:true]
+	  [DamageToolAttackerAmount:3]
+	  
+      </Description>
+      
+    </EntityComponent>
+
+
+	
+  </EntityComponents>
+</Definitions>

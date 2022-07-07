@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-Behavior</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Behavior]
+      [BehaviorName:Horsefly]
+	  [Triggers:HADES-Space-Hard-TriggerWarning]
+	  [Triggers:HADES-Space-Hard-TriggerProxDefence]
+	  [Triggers:HADES-Space-Hard-TriggerEscape]
+	  [Triggers:HADES-Space-Hard-TriggerAllClear]
+	  [Triggers:HADES-Space-Hard-TriggerDeath]
+	  [Triggers:HADES-Space-Hard-TriggerWarningReply]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-TriggerWarning</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:PlayerNear]
+	  [UseTrigger:true]
+	  [TargetDistance:5000]
+	  [MaxActions:1]
+	  [Actions:HADES-Space-Hard-ActionWarning]
+	  
+      </Description>
+      
+    </EntityComponent>	
+
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-ActionWarning</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+      [UseChatBroadcast:true]
+      [ChatData:HADES-Space-Hard-ChatWarning]
+	  [ResetCooldownTimeOfTriggers:true]
+	  [ResetTriggerCooldownNames:HADES-Space-Hard-TriggerWarningReply]
+	  
+	  [SetBooleansTrue:ChatWarningReply]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-ChatWarning</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:100]
+      [MaxChats:1]
+      [BroadcastRandomly:true]
+      
+      [Author:{AntennaName}]
+      [Color:Red]
+      
+      [ChatMessages:Silver Pythons! Always getting in the way!]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+	  [ChatMessages:We are not at war!]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      [ChatMessages:I smell Skull Wing in the area!]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      [ChatMessages:Who Dare approach me! Those Asteroid Mining Unions.]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+      [ChatMessages:Prepare to pay for your crimes!]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+      [ChatMessages:I shall crush you beneath my fists!]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+
+
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-TriggerWarningReply</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:Timer]
+	  [UseTrigger:true]
+	  [MinCooldownMs:3000]
+	  [MaxCooldownMs:4000]
+	  [Actions:HADES-Space-Hard-ActionWarningReply]
+	  [Conditions:HADES-Space-Hard-ConditionWarningReply]
+	  
+      </Description>
+      
+    </EntityComponent>	
+
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-ActionWarningReply</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+      [UseChatBroadcast:true]
+      [ChatData:HADES-Space-Hard-ChatWarningReply]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-ChatWarningReply</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:100]
+      [MaxChats:1]
+      [BroadcastRandomly:true]
+      
+      [Author:The Holy Command]
+      [Color:Red]
+      
+      [ChatMessages:I hope its not Slayz again!]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+      [ChatMessages:You are not alone my son. We are on the way.]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]	  
+
+      [ChatMessages:Acknowledged.]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+      [ChatMessages:We are sending in help. Hang in there.]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+	  
+      [ChatMessages:We will tear them appart]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      [ChatMessages:Probably just scavengers. keep an eye on them]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+
+
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-ConditionWarningReply</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Condition]
+      
+      [UseConditions:true]
+      [MatchAnyCondition:false]
+	  [CheckTrueBooleans:true]
+	  [TrueBooleans:ChatWarningReply]
+      
+      </Description>
+      
+    </EntityComponent>
+
+
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-TriggerProxDefence</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:PlayerNear]
+	  [UseTrigger:true]
+	  [TargetDistance:2000]
+	  [MaxActions:3]
+	  [StartsReady:true]
+	  [MinCooldownMs:120000]
+	  [MaxCooldownMs:180000]
+	  [Actions:HADES-Space-Hard-ActionProxDefence]
+	  
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-ActionProxDefence</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+      [UseChatBroadcast:true]
+	  [ChatData:HADES-Space-Hard-ChatProxDefence]
+	  
+	  [ChangeAutopilotSpeed:true]
+	  [NewAutopilotSpeed:70]
+	  
+	  [SpawnEncounter:true]
+	  [Spawner:HADES-Space-Hard-SpawnerProxDefence]
+	  
+	  [ResetCooldownTimeOfTriggers:true]
+	  [ResetTriggerCooldownNames:HADES-Space-Hard-TriggerAllClear]
+	  
+	  [SetBooleansTrue:CargoShipSpeedUp]
+      
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-ChatProxDefence</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:100]
+      [MaxChats:3]
+      [BroadcastRandomly:true]
+      
+      [Author:{AntennaName}]
+      [Color:Red]
+      
+      [ChatMessages:How Easy is the server now!]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-SpawnerProxDefence</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Spawn]
+      
+      [UseSpawn:true]
+      
+      [StartsReady:true]
+      [MaxSpawns:3]
+      
+      [SpawnGroups:HADES-Tooth Cat-Fighter]
+      
+      [UseRelativeSpawnPosition:false]
+      [MinDistance:2000]
+      [MaxDistance:2500]
+      [MinAltitude:2000]
+      [MaxAltitude:2500]
+      [IgnoreSafetyChecks:false]
+      
+      </Description>
+      
+    </EntityComponent>
+	
+	
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-TriggerEscape</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:Damage]
+	  [UseTrigger:true]
+	  [DamageTypes:Any]
+	  [MaxActions:3]
+	  [StartsReady:true]
+	  [MinCooldownMs:60000]
+	  [MaxCooldownMs:120000]
+	  [Actions:HADES-Space-Hard-ActionEscape]
+	  
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-ActionEscape</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+      [UseChatBroadcast:true]
+	  [ChatData:HADES-Space-Hard-ChatEscape]
+	  
+	  [ChangeAutopilotSpeed:true]
+	  [NewAutopilotSpeed:100]
+	  
+	  [SpawnEncounter:true]
+	  [Spawner:HADES-Space-Hard-SpawnerEscape]
+	  
+	  [ResetCooldownTimeOfTriggers:true]
+	  [ResetTriggerCooldownNames:HADES-Space-Hard-TriggerAllClear]
+	  
+	  [SetBooleansTrue:CargoShipSpeedUp]
+      
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-ChatEscape</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:100]
+      [MaxChats:1]
+      [BroadcastRandomly:true]
+      
+      [Author:{AntennaName}]
+      [Color:Red]
+      
+      [ChatMessages:We await the flames of Hades!]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-SpawnerEscape</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Spawn]
+      
+      [UseSpawn:true]
+      
+      [StartsReady:true]
+      [MaxSpawns:3]
+      
+      [SpawnGroups:HADES-Tooth Cat-Fighter]
+      
+      [UseRelativeSpawnPosition:false]
+      [MinDistance:2000]
+      [MaxDistance:2500]
+      [MinAltitude:2000]
+      [MaxAltitude:2500]
+      [IgnoreSafetyChecks:false]
+      
+      </Description>
+      
+    </EntityComponent>
+
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-TriggerAllClear</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:Timer]
+	  [UseTrigger:true]
+	  [MinCooldownMs:30000]
+	  [MaxCooldownMs:60000]
+	  [Actions:HADES-Space-Hard-ActionAllClear]
+	  [Conditions:HADES-Space-Hard-ConditionAllClear]
+	  
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-ConditionAllClear</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Condition]
+      
+      [UseConditions:true]
+      [MatchAnyCondition:false]
+	  [CheckTrueBooleans:true]
+	  [TrueBooleans:CargoShipSpeedUp]
+      
+      </Description>
+      
+    </EntityComponent>
+	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-ActionAllClear</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      
+	  [ChangeAutopilotSpeed:true]
+	  [NewAutopilotSpeed:40]
+
+      [SetBooleansFalse:CargoShipSpeedUp]
+
+      </Description>
+      
+    </EntityComponent>
+
+	
+  </EntityComponents>
+</Definitions>

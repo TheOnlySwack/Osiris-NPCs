@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-Drone-SmallAtmoDroneBehavior</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Behavior]
+      [BehaviorName:Fighter]
+	  
+	  [AutopilotData:HADES-Space-Hard-Drone-SmallAtmoDroneAutopilot]
+	  
+	  [FighterEngageDistancePlanet:600]
+	  [FighterDisengageDistancePlanet:1000]
+	  
+	  [TargetData:AI-DroneTargeting]
+	  
+	  [Triggers:HADES-Space-Hard-Drone-TriggerDeath]
+	  [Triggers:HADES-Space-Hard-Drone-TriggerRetreat]
+	  [Triggers:HADES-Space-Hard-Drone-TriggerProx]
+
+      </Description>
+      
+    </EntityComponent>
+	
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>HADES-Space-Hard-Drone-SmallAtmoDroneAutopilot</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+		[IdealPlanetAltitude:450]
+		[MinimumPlanetAltitude:350]
+		
+        [DisableInertiaDampeners:false]
+        [FlyLevelWithGravity:false]
+        [WaypointTolerance:40]
+        [IdealMinSpeed:70]
+        [IdealMaxSpeed:80]
+        [MaxSpeedTolerance:5]
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:500]
+
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:1000]
+        [StrafeMaxDurationMs:2000]
+
+        [StrafeMinCooldownMs:3000]
+        [StrafeMaxCooldownMs:5000]
+
+        [StrafeMinimumTargetDistance:600]
+        [StrafeSpeedCutOff:50]
+        [StrafeDistanceCutOff:450]
+
+      </Description>
+
+    </EntityComponent>	
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-Drone-TriggerDeath</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:Compromised]
+	  [UseTrigger:true]
+	  [StartsReady:true]
+	  [MaxActions:1]
+	  [Actions:HADES-Space-Hard-Drone-ActionDeath]
+	  
+      </Description>
+      
+    </EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-Drone-ActionDeath</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+      [GenerateExplosion:true]
+	  [ExplosionRange:2]
+	  [ExplosionDamage:10]
+	  [ExplosionIgnoresVoxels:true]
+	  [ForceDespawn:true]
+	  
+      </Description>
+      
+    </EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-Drone-TriggerRetreat</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Trigger]
+      [Type:Timer]
+	  [UseTrigger:true]
+	  [StartsReady:false]
+	  [MinCooldownMs:600000]
+	  [MaxCooldownMs:900000]
+	  [Actions:HADES-Space-Hard-Drone-ActionRetreat]
+
+      </Description>
+      
+    </EntityComponent>	
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-Drone-ActionRetreat</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Action]
+	  [Retreat:true]
+	  [UseChatBroadcast:true]
+      [ChatData:HADES-Space-Hard-Drone-ChatRetreat]
+	  
+      </Description>
+      
+    </EntityComponent>
+	
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>HADES-Space-Hard-Drone-ChatRetreat</SubtypeId>
+      </Id>
+      <Description>
+
+      [RivalAI Chat]
+      
+      [UseChat:true]
+      [StartsReady:true]
+      [Chance:100]
+      [MaxChats:1]
+      [BroadcastRandomly:true]
+      
+      [Author:{AntennaName}]
+      [Color:Red]
+      
+      [ChatMessages:Argh! Ill get you next time!]
+      [ChatAudio:]
+      [BroadcastChatType:Chat]
+
+
+      </Description>
+      
+    </EntityComponent>
+
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>HADES-Space-Hard-Drone-TriggerProx</SubtypeId>
+        </Id>
+        <Description>
+			
+		[RivalAI Trigger]
+		
+		[UseTrigger:true]
+		[Type:CommandReceived]
+		[CommandReceiveCode:HADES-Space-Hard-Drone-Prox]
+		[StartsReady:true]
+		[MaxActions:1]
+		[Actions:HADES-Space-Hard-Drone-ActionProx]
+
+		</Description>
+    </EntityComponent>
+		
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>HADES-Space-Hard-Drone-ActionProx</SubtypeId>
+        </Id>
+        <Description>
+			
+		[RivalAI Action]
+		
+		[UseChatBroadcast:true]
+		[ChatData:HADES-Space-Hard-Drone-ChatProx]
+		
+		</Description>
+    </EntityComponent>
+		
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>HADES-Space-Hard-Drone-ChatProx</SubtypeId>
+        </Id>
+        <Description>
+	
+		[RivalAI Chat]
+			
+		[UseChat:true]
+        [StartsReady:true]
+        [MaxChats:1]
+        [BroadcastRandomly:false]
+		[Author:{AntennaName} Controller]
+		[Color:Red]
+			
+		[IgnoreAntennaRequirement:true]
+		[IgnoredAntennaRangeOverride:5000]
+
+        [ChatMessages:I will gut you like Cluster's Mother!]
+        [ChatAudio:]
+        [BroadcastChatType:Chat]
+			
+		</Description>
+    </EntityComponent>
+
+
+
+
+
+  </EntityComponents>
+</Definitions>

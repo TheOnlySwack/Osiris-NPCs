@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>SWARM-Tumor-Nester</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[AtmosphericCargoShip:true]
+			[RivalAiSpawn:true]
+			[FactionOwner:SWARM]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+			[UseDayOrNightOnly:true]
+			[SpawnOnlyAtNight:true]
+			[UsePCUCheck:true]
+			[PCUCheckRadius:1000]
+			[PCUMinimum:30000]
+			[PCUMaximum:100000]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>80</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Tumor">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>10</Speed>
+					<Behaviour>Swarm-Nest-Behavior</Behaviour>
+					
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> 
+				<SubtypeId>SWARM-Rugae-Latcher</SubtypeId>
+			</Id>
+			<Description>
+
+			[Modular Encounters SpawnGroup]
+			[RivalAiSpawn:true]
+			[FactionOwner:SWARM]
+			[ReplenishSystems:true]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[TurretTargetNeutrals:true]
+
+			</Description>
+			<Icon>Textures\GUI\Icons\Fake.dds</Icon>  
+			<IsPirate>true</IsPirate>
+			<Frequency>90</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Rugae">
+					<Position>
+						<X>0.0</X>
+						<Y>1000.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>90</Speed>
+					<Behaviour>SWARM-Rugae-Behavior</Behaviour>
+					
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+	</SpawnGroups>
+</Definitions>
